@@ -1,0 +1,7 @@
+﻿  Contact.cpp
+d:\seneca\oop\workshop\oop-workshops\ws06\in-lab\contact.cpp(91): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(340): note: see declaration of 'strncpy'
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  w6_in_lab.cpp
+  in-lab.vcxproj -> D:\Seneca\OOP\workshop\OOP-Workshops\WS06\in-lab\Debug\in-lab.exe
