@@ -9,9 +9,11 @@
 #ifndef SICT_CONTACT_H
 #define SICT_CONTACT_H
 
-const int maxName = 20;
+
 
 namespace sict {
+
+	const int maxName = 20;
 
 	class Contact {
 		char m_name[maxName];

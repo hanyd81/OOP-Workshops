@@ -26,7 +26,7 @@ namespace sict {
 		delete[] m_pPhones;
 	}
 
-	Contact::Contact(char* name, long long* pPhones, int n)
+	Contact::Contact(const char* name, const long long* pPhones, int n)
 	{
 		set(name, pPhones, n);
 		//cout << "create " << this->m_pPhones << endl;
@@ -46,21 +46,23 @@ namespace sict {
 	void Contact::display() const
 	{
 		long long temp;
+
 		if (isEmpty())
 			cout << "Empty contact!" << endl;
 		else {
 			cout << m_name << endl;
+			cout.fill('0');
 			for (int i = 0; i < m_n; ++i) {
 				temp = m_pPhones[i];
 				cout << "(+" << cCode(temp) << ") "
 					<< aCode(temp) << " "
 					<< pCode(temp) / 10000 << "-";
-				cout.width(4);
-				cout.fill('0');
+				cout.width(4);				
 				cout << pCode(temp) % 10000 << endl;
 
 			}
 		}
+		cout.fill(' ');
 	}
 
 	int Contact::cCode(long long phone) const
@@ -86,7 +88,7 @@ namespace sict {
 		return valid;
 	}
 
-	void Contact::set(char* name, long long* pPhones, int n)
+	void Contact::set(const char* name, const long long* pPhones, int n)
 	{
 
 		if (name != nullptr && name[0] != '\0') {
