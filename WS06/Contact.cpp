@@ -26,7 +26,7 @@ namespace sict {
 		delete[] m_pPhones;
 	}
 
-	Contact::Contact(char* name, long long* pPhones, int n)
+	Contact::Contact(const char* name, const long long* pPhones, int n)
 	{
 		set(name, pPhones, n);
 		//cout << "create " << this->m_pPhones << endl;
@@ -55,6 +55,7 @@ namespace sict {
 
 			}
 		}
+		cout.fill(' ');
 	}
 
 	int Contact::cCode(long long phone) const
@@ -80,7 +81,7 @@ namespace sict {
 		return valid;
 	}
 
-	void Contact::set(char* name, long long* pPhones, int n)
+	void Contact::set(const char* name, const long long* pPhones, int n)
 	{
 
 		if (name != nullptr && name[0] != '\0') {

@@ -8,9 +8,11 @@
 #ifndef SICT_CONTACT_H
 #define SICT_CONTACT_H
 
-const int maxName = 20;
+
 
 namespace sict {
+
+	const int maxName = 20;
 
 	class Contact {
 		char m_name[maxName];
@@ -21,11 +23,11 @@ namespace sict {
 		int aCode(long long phone) const;
 		int pCode(long long phone) const;
 		bool validp(long long phone) const;
-		void set(char* name, long long* pPhones, int n);
+		void set(const char* name, const long long* pPhones, int n);
 	
 	public:	
 		Contact();
-		Contact(char* name, long long* pPhones, int n);
+		Contact(const char* name, const long long* pPhones, int n);
 		~Contact();
 		bool isEmpty() const;
 		void display() const;
