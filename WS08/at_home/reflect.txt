@@ -1,0 +1,10 @@
+reflect
+1. What is the difference between an abstract base class and a concrete class?
+Abstract class has at least one pure virtual function and cannot be instantiated. In this workshop, the iAccount class and Account class are abstract base classes. Other code cannot create instance of them. SavingAccount  class and ChequingAccount class are concrete classes, their member functions are all implemented. They can have instance. 
+2. Identify the functions that shadow functions of the same name in your solution?
+Function bool credit(double), bool debit(double), void monthEnd(), display(std::ostream&) in ChequingAccount class are the functions that override the same function in the Account class and iAccount. 
+Function void monthEnd(), void display(std::ostream& out) const in SavingAccount class are the the functions that override the same function in the Account class and iAccount.
+
+3. Explain what you have learned in this workshop.
+I learned how to define an interface and how to use derived class from same base class to implement two things which are similar but different. 
+
